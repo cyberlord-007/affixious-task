@@ -85,6 +85,10 @@
         justify-content: flex-start;
     }
 
+    h1 {
+        padding-top: 100px;
+    }
+
     .todo-container {
         width: 100%;
     }
