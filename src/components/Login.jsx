@@ -15,7 +15,7 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        if(email != '' && password != '') {
+        if(email === 'todoist@gmail.com' && password === 'todo123') {
             setAuthenticated(true)
         }
     }

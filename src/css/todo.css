@@ -1,6 +1,4 @@
-*{
-    background-color: #f5f5f5;
-}
+
 
 .todo-container {
     width: 100vw;
@@ -30,6 +28,24 @@
     padding: 10px;
     font-size: 18px;
     margin-left: 18px;
+}
+
+.logout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(42, 161, 235);
+    color: #fff;
+    width: 150px;
+    padding: 10px;  
+    text-align: center;
+    font-size: 18px;
+    margin-left: 18px;
+    border-radius: 20px;
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
 }
 
 .todo-list {

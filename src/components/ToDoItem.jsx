@@ -1,7 +1,7 @@
 import React, {useState}from 'react'
 import {FaCheckCircle,FaTimesCircle,FaEdit} from 'react-icons/fa'
 
-const ToDoItem = ({text,remove}) => {
+const ToDoItem = ({text,remove,updateTodo}) => {
 
 
     const [clicked,setClicked] = useState(false)
@@ -14,7 +14,15 @@ const ToDoItem = ({text,remove}) => {
              <div className="text-wrap">
                  {
                      clicked ? 
-                     <input type='text' name={input} value={input} onChange={(e) => setInput(e.target.value)} /> :
+                     <input type='text' name={input} value={input} onKeyDown={(e) =>{
+                        if(e.key === 'Enter') {
+                            setClicked(false)
+                            updateTodo(text,input)
+                        }
+                     }} onChange={
+                         (e) => {
+                            setInput(e.target.value)
+                         }} /> :
                      <h3>
                         {input}
                     </h3>
